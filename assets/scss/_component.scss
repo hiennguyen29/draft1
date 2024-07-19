@@ -1,0 +1,46 @@
+@use "_variables" as v;
+header {
+  background-color: v.$background-colour; /* Example background color */
+  color: white; 
+  padding: 10px 20px; /* Padding for the header */
+  
+  .menu {
+    display: flex; /* Flex container for navigation */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    max-width: 960px; /* Limiting the width for responsiveness */
+    margin: 0 auto; /* Centering the menu horizontally */
+
+    .menu-logo {
+      font-size: 1.5rem; /* Example: Logo font size */
+      margin: 0; /* Remove default margin */
+    }
+
+    .menu-list {
+      display: flex; /* Flex container for menu items */
+      list-style-type: none; /* Remove default list styles */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+
+    .menu-list li {
+      margin-right: 20px; /* Spacing between menu items */
+    }
+
+    .menu-list li:last-child {
+      margin-right: 0; /* No margin on the last menu item */
+    }
+
+    .menu-list li a {
+      color: white; /* Menu item text color */
+      text-decoration: none; /* Remove underline */
+      padding: 10px; /* Padding around menu item text */
+      transition: color 0.3s ease; /* Smooth color transition on hover */
+
+      &:hover {
+        color: lightgray; /* Color on hover */
+      }
+    }
+  }
+}
+
